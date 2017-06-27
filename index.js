@@ -3,7 +3,8 @@ module.exports = (argv) => {
     let o = {
         filePath : argv[1]
     };
-    argv.slice(2).forEach((item, i) => {
+    let arr = argv.slice(2);
+    arr.forEach((item, i) => {
         if (i % 2) {
             o[arr[i - 1]] = item;
         }
