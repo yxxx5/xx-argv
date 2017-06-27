@@ -1,9 +1,9 @@
-module.exports = () => {
+module.exports = (argv) => {
+    argv = argv || process.argv
     let o = {
-        filePath : process.argv[1]
+        filePath : argv[1]
     };
-    let arr = process.argv.slice(2);
-    arr.forEach((item, i) => {
+    argv.slice(2).forEach((item, i) => {
         if (i % 2) {
             o[arr[i - 1]] = item;
         }
